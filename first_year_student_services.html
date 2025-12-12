@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>First Year Engineering - Student Services</title>
+  <meta name="description"
+    content="Student services page for first year engineering students: counselling, labs, tutoring, placements, workshops and more." />
+  <style>
+    :root {
+      --accent: #4B0082;
+      --muted: #6b7280;
+      --card: #f8fafc;
+      --radius: 12px;
+      --maxw: 1000px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #eef2ff 0%, #ffffff 60%);
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 28px 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .site {
+      width: auto;
+      max-width: var(--maxw);
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.08);
+      overflow: hidden;
+    }
+
+    header {
+      background:#4B0082;
+      color: white;
+      padding: 38px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0.2px
+    }
+
+    header p {
+      margin: 6px 0 0;
+      opacity: 0.95;
+      color: rgba(255, 255, 255, 0.9)
+    }
+
+    nav a {
+      font-size: 1.8rem;
+      color: white;
+      margin-left: 4rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #228B22;
+      border-bottom: 3px solid #228B22;
+    }
+
+    @media(max-width:995px) {
+      nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: auto;
+        border-left: 3px solid #228B22;
+        border-bottom: 3px solid #228B22;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+      }
+
+      nav a:hover,
+      nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #228B22;
+      }
+    }
+
+
+    .content {
+      padding: 24px;
+    }
+
+    .intro {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(11, 94, 215, 0.06);
+      min-height: 120px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: var(--accent)
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid rgba(11, 94, 215, 0.15);
+      padding: 9px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .details {
+      margin-top: 26px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .left,
+    .right {
+      flex: 1 1 360px;
+      min-width: 280px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px
+    }
+
+    .service-list li {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px;
+      border: 1px solid rgba(2, 6, 23, 0.04);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .service-list li strong {
+      display: block
+    }
+
+    form {
+      background: #fbfdff;
+      border: 1px solid rgba(11, 94, 215, 0.06);
+      padding: 14px;
+      border-radius: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--muted)
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(2, 6, 23, 0.06);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical
+    }
+
+    footer {
+      padding: 18px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      background: #fbfcff;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    @media (max-width:720px) {
+      header {
+        padding: 18px
+      }
+
+      .content {
+        padding: 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site" role="main">
+    <header>
+      <h1><B>ARMAN MULLA</B> </h1>MY SERVICES
+      <nav>
+        <a href="05&06.html"> Home</a>
+        <a href="first_year_student_services.html" target="_blank" class="active">Services</a>
+        <a href="#" target="_blank">Skills</a>
+        <a href="engineering_project.html" target="_blank">Projects</a>
+        <a href="experience.html" target="_blank">Experience</a>
+        <a href="mailto:armanmulla3010@gmail.com" target="_blank">Contact</a>
+      </nav>
+      <p>Centralized page listing support and services available to first year engineering students.</p>
+    </header>
+
+    <div class="content">
+      <div class="intro">
+        <div style="flex:1 1 420px;">
+          <p><strong>Welcome!</strong> This page helps first year students quickly find the services they need: academic
+            help, labs, counseling, internships, and campus facilities. Each service card gives a brief description and
+            quick actions.</p>
+        </div>
+        <div style="min-width:200px;">
+          <p style="margin:0"><strong>Office Hours:</strong><br />Mon–Fri • 9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+
+      <div class="grid" aria-hidden="false">
+        <article class="card">
+          <h3>Academic Tutoring</h3>
+          <p>Peer tutors and teaching assistants available for basic maths, physics, and programming sessions. Book
+            one-to-one or join group workshops.</p>
+        </article>
+
+        <article class="card">
+          <h3>Laboratory Assistance</h3>
+          <p>Guidance for experiments, lab safety training, equipment booking, and lab report templates for practicals.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Counseling & Wellbeing</h3>
+          <p>Available counselors for academic stress, time management, and personal support. Confidential appointments
+            on request.</p>
+        </article>
+
+        <article class="card">
+          <h3>Internships & Placements</h3>
+          <p>Information on internships, skill-building workshops, résumé reviews and campus placement drives targeted
+            for first-year preparation.</p>
+        </article>
+
+        <section class="card">
+          <h3>Workshops & Seminars</h3>
+          <p>Weekly hands-on workshops: Arduino, basic electronics, CAD, and professional skills (communication, resume
+            writing).</p>
+        </section>
+
+        <article class="card">
+          <h3>Library & Learning Resources</h3>
+          <p>Access to digital textbooks, past exam papers, and seat reservation for study rooms. Orientation sessions
+            available.</p>
+        </article>
+      </div>
+
+      <div class="cta-row" role="region" aria-label="actions">
+        <a class="btn" href="#contact">Request a Service</a>
+        <a class="secondary" href="#faq">Frequently Asked Questions</a>
+        <a class="secondary" href="#helpdesk">Help Desk</a>
+      </div>
+
+      <div class="details">
+        <div class="left">
+          <h3 id="faq">Common Questions</h3>
+          <ul class="service-list">
+            <li>
+              <div><strong>How to book a lab?</strong><span style="display:block;color:var(--muted)">Use the lab booking
+                  form at the help desk or contact lab in-charge during office hours.</span></div>
+            </li>
+            <li>
+              <div><strong>Can I get a tutor for programming?</strong><span style="display:block;color:var(--muted)">Yes
+                  — submit a tutoring request to match with a peer tutor based on availability.</span></div>
+            </li>
+            <li>
+              <div><strong>Are counseling sessions free?</strong><span style="display:block;color:var(--muted)">Yes.
+                  Confidential and free for enrolled students.</span></div>
+            </li>
+            <li>
+              <div><strong>Where to find past practicals?</strong><span style="display:block;color:var(--muted)">Digital
+                  repository in the library portal and a sample index on this page (coming soon).</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="right" id="contact">
+          <h3>Request a Service / Contact Help Desk</h3>
+          <form onsubmit="event.preventDefault(); alert('This is a demo form — implement backend to handle requests.')">
+            <label for="name">Your name</label>
+            <input id="name" name="name" placeholder="Full name" required />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="you@college.edu" required />
+
+            <label for="service">Service required</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Academic Tutoring</option>
+              <option>Lab Booking</option>
+              <option>Counseling</option>
+              <option>Internships & Placements</option>
+              <option>Workshops</option>
+              <option>Library Support</option>
+            </select>
+
+            <label for="details">Details (brief)</label>
+            <textarea id="details" name="details" placeholder="Describe your requirement"></textarea>
+
+            <button type="submit" class="btn" style="width:100%;">Submit Request</button>
+          </form>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            <p style="margin:6px 0"><strong>Help Desk:</strong>+91 8999795881 </p>
+            <p style="margin:6px 0">Email: <a href="mailto:armanmulla3010@gmail.com">armanmulla3010@gmail.com</a></p>
+            <p style="margin:6px 0">Location: Admin Block, Ground Floor</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div>&copy;ARMAN MULLA — My Services</div>
+      <div>Designed for practical submission • Simple & easy to customize</div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Year Engineering Mini Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #4B0082;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #228B22;
+            border-bottom: 3px solid #228B22;
+        }
+
+        @media(max-width:995px) {
+            nav {
+                position: absolute;
+                display: none;
+                top: 0;
+                right: 0;
+                width: 40%;
+                border-left: 3px solid #228B22;
+                border-bottom: 3px solid #228B22;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem solid;
+                background-color: #161616;
+                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #228B22;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #004080;
+        }
+
+        .project-box {
+            background: #e8f1ff;
+            padding: 15px;
+            border-left: 5px solid #004080;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #004080;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>First Year Engineering Student Projects</h1>
+        <nav>
+            <a href="05&06.html"> Home</a>
+            <a href="first_year_student_services.html" target="_blank">Services</a>
+            <a href="#" target="_blank">Skills</a>
+            <a href="engineering_project.html" target="_blank" class="active">Projects</a>
+            <a href="experience.html" target="_blank">Experience</a>
+            <a href="mailto:armanmulla3010@gmail.com" target="_blank">Contact</a>
+        </nav>
+        <p>Simple Mini HTML Projects for Practical Submission</p>
+    </header>
+
+    <div class="container">
+        <h2>1. Smart Helmet Project</h2>
+        <div class="project-box">
+            <p><b>Description:</b> A project showing how a smart helmet detects accidents and ensures safety for riders.
+            </p>
+            <p><b>Features:</b></p>
+            <ul>
+                <li>Accident detection</li>
+                <li>Alcohol sensing</li>
+                <li>Emergency alert system</li>
+            </ul>
+        </div>
+
+        <h2>2. Rain Protection System for Farmers</h2>
+        <div class="project-box">
+            <p><b>Description:</b> A model that covers stored grains or clothes when it detects rain.</p>
+            <p><b>Features:</b></p>
+            <ul>
+                <li>Automatic rain sensor</li>
+                <li>Mobile alert system</li>
+                <li>Protection mechanism</li>
+            </ul>
+        </div>
+
+        <h2>3. Household Wiring Safety Analysis</h2>
+        <div class="project-box">
+            <p><b>Description:</b> Study of wiring systems used at home and identification of faults & safety concerns.
+            </p>
+            <p><b>Features:</b></p>
+            <ul>
+                <li>Load calculation</li>
+                <li>Detection of loose connections</li>
+                <li>Safety recommendations</li>
+            </ul>
+        </div>
+
+        <h2>4. Travel Destination Guide Website</h2>
+        <div class="project-box">
+            <p><b>Description:</b> A simple website showing top tourist destinations in India.</p>
+            <p><b>Features:</b></p>
+            <ul>
+                <li>Images and descriptions</li>
+                <li>Clean UI</li>
+                <li>Beginner-friendly HTML & CSS</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <b>ARMAN MULLA</b></p>
+    </footer>
+</body>
+
+</html>

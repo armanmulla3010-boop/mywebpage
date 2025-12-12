@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Notes</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        /* NAVIGATION PURPLE COLOR */
+        nav {
+            background-color: #4B0082; /* deep purple */
+            padding: 15px 0;
+        }
+
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #DA70D6; /* light purple */
+            border-bottom: 3px solid #DA70D6;
+        }
+
+        @media(max-width:995px) {
+            nav {
+                position: absolute;
+                display: none;
+                top: 0;
+                right: 0;
+                width: 40%;
+                border-left: 3px solid #DA70D6;
+                border-bottom: 3px solid #DA70D6;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem solid;
+                background-color: #4B0082; /* purple */
+                border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #DA70D6;
+            }
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #6A0DAD; /* purple button */
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .download-button:hover {
+            background-color: #4B0082; /* darker purple */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="first_year_student_services.html" target="_blank">Services</a>
+        <a href="myskills.html" target="_blank">Skills</a>
+        <a href="engineering_project.html" target="_blank">Projects</a>
+        <a href="experience.html" target="_blank">Experience</a>
+        <a href="mailto:armanmulla3010@gmail.com" target="_blank">Contact</a>
+    </nav>
+
+    <h1>My Class Notes</h1>
+
+    <p>Click the button below to view or download the <b>JAVA</b> notes.</p>
+    <a href="JS All in One Notes.pdf" class="download-button" download>Download Notes PDF</a><br>
+
+    <p>Click the button below to view or download the <b>C language</b> notes.</p>
+    <a href="Chapter 1-20251205T175107Z-1-001.zip" class="download-button" download>Download Notes PDF</a><br>
+
+    <p>Click the button below to view or download the <b>BASIC PHYSICS</b> notes.</p>
+    <a href="Engineering Physics - PH3151 2021 Regulation - Notes - Hand Writing.pdf" class="download-button" download>Download Notes PDF</a><br>
+
+    <p>Click the button below to view or download the <b>CALCULUS</b> notes.</p>
+    <a href="Matrices and Calculus - MA3151 2021 Regulation - Notes - Hand Writing.pdf" class="download-button" download>Download Notes PDF</a><br>
+
+    <p>Click the button below to view or download the <b>HTML</b> notes.</p>
+    <a href="HTML(WT) Lecture Notes.pdf" class="download-button" download>Download Notes PDF</a><br>
+
+    <p>Click the button below to view or download the <b>CSS</b> notes.</p>
+    <a href="drive-download-20251205T175846Z-1-001.zip" class="download-button" download>Download Notes PDF</a><br>
+
+    <p><small>The file will open in a new tab if your browser supports it, otherwise it will download automatically.</small></p>
+
+</body>
+</html>
